@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FGFZGZ2R4X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FGFZGZ2R4X');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="description" content="DemoSpeedup">
+  <meta name="keywords" content="Teleoperation, imitation learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DemoSpeedup</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
+  <script src="./static/js/isInViewport.min.js"></script>
+  <!-- <script defer src="./static/js/fontawesome.all.min.js"></script> -->
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./resources/icon.ico">
+  
+  <script src="https://kit.fontawesome.com/006a5775d5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+             <img src="resources/logo.png" alt="Logo" style="vertical-align: middle;" width="80"> <span style="font-weight: normal;"></span>DemoSpeedup <br> <span style="font-weight: normal;"> Accelerating Visuomotor Policies via
+Entropy-Guided Demonstration Acceleration</span>
+          </h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="">Lingxiao Guo</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://steven-xzr.github.io/">Zhengrong Xue</a><sup>2,1,3</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="">Zijing Xu</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="http://hxu.rocks/">Huazhe Xu</a><sup>2,1,3</sup>
+               </div>
+          <div class="is-size-5 affiliation">
+            <div>
+              <sup>1</sup>Shanghai Qi Zhi Institute,
+              <sup>2</sup>Tsinghua Embodied AI Lab @ IIIS, Tsinghua University,
+              <sup>3</sup>Shanghai AI Lab,
+            </div>
+            <div>
+              <sup>4</sup>University of Electronic Science and Technology of China
+            </div>
+          </div>
+             
+          
+            <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="./resources/demospeedup.pdf" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2506.05064" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>1x Videos</span>
+                </a>
+              </span> -->
+
+              <!-- <span class="link-block">
+                <a href=""
+                    class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <i class="fab fa-bilibili"></i>
+                    </span>
+                    <span>Bilibili</span>
+                </a>
+              </span> -->
+              
+              <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa-brands fa-x-twitter"></i>
+                  </span>
+                  <span>Summary</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="file:///D:/Downloads/demospeedup.github.io-main/demospeedup.github.io-main/index.html" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                </a>
+              </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper video. -->
+<!--
+<section class="section" style="padding-bottom: 0">
+  <div class="container">
+    <div id="method_video" class="columns is-centered has-text-centered">
+      <div class="column is-half no-bottom-padding">
+          <iframe height="500" src="https://www.youtube.com/embed/d9EQDjU1gyQ?si=s2d5lT_NsK2kiSQs" title="YouTube video player" frameborder="0" style="border: 1px solid #bbb; border-radius: 10px; width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h5 style="text-align: center;">Remote Teleoperation</h5>
+      </div>
+      <div class="column is-half no-bottom-padding">
+           <iframe height="500" src="https://www.youtube.com/embed/dsDcD-WT8F8?si=-ckKXTdHuPfQ9ozh" title="YouTube video player" frameborder="0" style="border: 1px solid #bbb; border-radius: 10px; width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h5 style="text-align: center;">Autonomous Skills</h5>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+</section>
+-->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <!-- <div class="column is-two-third">
+        
+      </div> -->
+      <div class="column is-two-thirds">
+        <!-- <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Fully Autonomous</h2> -->
+        <h5 style="text-align: center;"> Still speed up your robot video demos for presentation?</h5>
+        <tr>
+          <td>
+            <div class="row">
+            <div class="col">
+              <h5 style="text-align: center;"> Try <img src="resources/logo.png" alt="Logo" style="vertical-align: middle;" width="3%"> <strong>DemoSpeedup</strong> to accelerate your policy execution!</h5>
+              <video autoplay loop playsinline controls src="./resources/clips/overview.mp4" width="100%"
+                     style="border-radius:10px; "></video>
+              <span class="link-block">
+              
+              </span>
+            </div>
+            </div>
+            </div>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+
+  <section class="section">
+
+  <section class="section">
+    
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-11">
+        <h2 class="title is-2">Abstract</h2>
+        <img style="margin-bottom: 5px;" src="./resources/teaser.png" class="method-image" /><br>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-10">
+  <div class="content has-text-justified">
+          <p class="is-size-5">
+            Imitation learning has shown great promise in robotic manipulation,
+but the policy's execution is often unsatisfactorily slow due to commonly tardy
+demonstrations collected by human operators. In this work, we present DemoSpeedup, a <span style="color: rgb(255, 0, 0);">self-supervised</span> method to accelerate visuomotor policy execution via
+entropy-guided demonstration acceleration. DemoSpeedup starts from training
+an arbitrary generative policy (e.g., ACT or Diffusion Policy) on normal-speed
+demonstrations, which serves as a per-frame action entropy estimator. The key
+insight is that frames with lower action entropy estimates call for more consistent
+policy behaviors, which often indicate the demands for higher-precision operations. In contrast, frames with higher entropy estimates correspond to more casual
+sections, and therefore can be more safely accelerated. Thus, we segment the
+original demonstrations according to the estimated entropy, and accelerate them
+by down-sampling at rates that increase with the entropy values. Trained with the
+speedup demonstrations, the resulting policies execute <span style="color: rgb(255, 0, 0);">up to 3 times faster</span> while
+maintaining the task completion performance. Interestingly, these policies could
+even achieve higher success rates than those trained with normal-speed demonstrations, due to the benefits of reduced decision-making horizons.
+          </p>
+        </div>
+    </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="section">
+    
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-quarters">
+        <h2 class="title is-2">Method</h2>
+        <img style="margin-bottom: 5px;" src="./resources/pipeline2-1.png" class="method-image" /><br>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-quarters">
+  <div class="content has-text-justified">
+          <h5 style="text-align: start;"> 
+            DemoSpeedup utilizes a generative policy trained from original demonstrations to estimate
+conditional action entropy. Actions with <span style="color: rgb(255, 0, 0);">high entropy (red points)</span> are down-sampled at a higher rate
+while actions with <span style="color: rgb(73, 202, 73);">low entropy (green points)</span> are down-sampled at a lower rate.
+          </h5>
+        </div>
+    </div>
+    </div>
+  </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Entropy Visualization</h2>
+          <h5 style="text-align: center;">Estimated entropy and segmented precision level of collected demos from robot head camera (background is masked for clarity).</h5>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/entropy_vis/bomb.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                           
+                    <span class="link-block">
+                    </span>
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/entropy_vis/sort.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                  
+                  <span class="link-block">
+                  </span>
+
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/entropy_vis/kitchenware.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                           
+                    <span class="link-block">
+                    </span>
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/entropy_vis/conveyer.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                  
+                  <span class="link-block">
+                  </span>
+
+                </div>
+              </div>
+            </td>
+          </tr>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Real-world Experiments</h2>
+          <tr>
+            <br>
+            <h5 style="text-align: center;">All the videos are played in real time.</h5>
+            <br>
+          <br>
+            <h3 style="text-align: center;">Pen in Cup</h5>
+            <br>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/act-pen.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                    
+                    <span class="link-block">
+                    
+                    </span>
+
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/dp-pen.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                      
+                  <span class="link-block">
+                    
+                  </span>
+
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/act-ds-pen.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                    <span class="link-block">
+                    
+                    </span>
+
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/dp-ds-pen.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                  
+                  <span class="link-block">
+                  </span>
+
+                </div>
+              </div>
+              <br>
+              <br>
+              <h3 style="text-align: center;">Sort</h5>
+            <br>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/act-sort.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                    
+                    <span class="link-block">
+                    
+                    </span>
+
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/dp-sort.mp4"width="100%"
+                         style="border-radius:10px; "></video>
+                      
+                  <span class="link-block">
+                    
+                  </span>
+
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/act-ds-sort.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                    <span class="link-block">
+                    
+                    </span>
+
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/dp-ds-sort.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                  
+                  <span class="link-block">
+                  </span>
+
+                </div>
+              </div>
+              <br>
+              <br>
+              <h3 style="text-align: center;">Kitchenware</h5>
+            <br>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/act-kitchenware.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                    
+                    <span class="link-block">
+                    
+                    </span>
+
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/dp-kitchenware.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                      
+                  <span class="link-block">
+                    
+                  </span>
+
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/act-ds-kitchenware.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                    <span class="link-block">
+                    
+                    </span>
+
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/dp-ds-kitchenware.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                  
+                  <span class="link-block">
+                  </span>
+
+                </div>
+              </div>
+              <br>
+              <br>
+              <h3 style="text-align: center;">Bomb deposal</h5>
+            <br>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/act-bomb.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                    
+                    <span class="link-block">
+                    
+                    </span>
+
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/dp-bomb.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                      
+                  <span class="link-block">
+                    
+                  </span>
+
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/act-ds-bomb.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                    <span class="link-block">
+                    
+                    </span>
+
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/dp-ds-bomb.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                  
+                  <span class="link-block">
+                  </span>
+
+                </div>
+              </div>
+              <br>
+              <br>
+              <h3 style="text-align: center;">Conveyer Fast</h5>
+            <br>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/act-conveyer.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                    
+                    <span class="link-block">
+                    
+                    </span>
+
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/dp-conveyer.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                      
+                  <span class="link-block">
+                    
+                  </span>
+
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/act-ds-conveyer.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                    <span class="link-block">
+                    
+                    </span>
+
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/dp-ds-conveyer.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                  
+                  <span class="link-block">
+                  </span>
+
+                </div>
+              </div>
+              <br>
+              
+          </tr>
+        </div> 
+      </div>
+    </div>
+    <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 style="text-align: center;">Quantitative results</h5>
+        <img style="margin-bottom: 5px;" src="./resources/real-results.png" class="method-image" /><br>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+  <div class="content has-text-justified">
+          <h5 style="text-align: center;"> 
+            The results demonstrate the efficiency of <img src="resources/logo.png" alt="Logo" style="vertical-align: middle;" width="3%"> <strong>DemoSpeedup</strong> in accelerating the speed of visuomotor policies while maintaining the success rate.
+          </h5>
+        </div>
+    </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Simulation Experiments</h2>
+          <!-- <h5 style="text-align: center;">Robot and operator are ~3000 miles away from each other.</h5> -->
+          <tr>
+            <td>
+              <tr>
+            <br>
+            <p class="is-size-5">We evaluate our approach on <strong>Aloha</strong> and <strong>Bigym</strong>, which contain high-precision controllers and human-collected datasets. Some simulation tasks with corresponding methods are displayed below.</p>
+            
+          <br>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/transfer.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/plate.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div><br>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/insertion.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/sandwich.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div><br>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/saucepan.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/drawers.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </div> 
+      </div>
+      <div>
+  <button
+    onclick="
+      const content = this.nextElementSibling;
+      if (content.style.display === 'none') {
+        content.style.display = 'block';
+        this.innerHTML = '<span style=&quot;font-weight:bold;&quot;>Hide Simulation Results</span> &#9650;';
+      } else {
+        content.style.display = 'none';
+        this.innerHTML = '<span style=&quot;font-weight:bold;&quot;>Quantitative Simulation Results</span> &#9660;';
+      }
+    "
+    style="
+      display: block;
+      margin: 20px auto;
+      background-color: #000;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 24px;
+      cursor: pointer;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.2s ease;
+      white-space: nowrap;
+    ">
+    <span style="font-weight:bold;"> Quantitative Simulation Results</span> &#9660;
+  </button>
+
+  <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <img style="margin-bottom: 5px;" src="./resources/sim_results.png" class="method-image" /><br>
+      <div class="content has-text-justified">
+          
+        </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  
+  
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+  
+    </div>
+
+</div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Scope of application </h2>
+          <div class="content has-text-justified">
+          <p class="is-size-5"> <strong>DemoSpeedup</strong> is suitable for <strong>isomorphic teleoperation</strong> such as VR and kinematics-based teaching, since the robot's action data exhibits similar entropy patterns to human motions. 
+          However, it may be not suitable for non-isomorphic teleoperation data or script-generated data. 
+           </p>
+          </div>
+          <tr>
+            
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/demogen-jar/demogen-jar.mp4" width="120%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/real/keyboard-entropy.mp4" width="80%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div><br>
+          <div class="content has-text-justified">
+          <p class="is-size-5"> Above shows the entropy of a demo from <a href="https://demo-generation.github.io/"><span style="color: rgba(196, 7, 196, 0.747);"><strong>DemoGen</strong></span></a> teleoperated by <strong>keyboard</strong>. In the left video, the upper left number is the entropy and the lower left number is the segmented precision('0' refers to Precise and '1' refers to Causal). Since the robot moves in a straight line in the air during keyboard-teleoperation, its motion has lower entropy in the air and higher entropy during contact-rich phases, which differs from human's pattern.
+        </p>
+          </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/real/metaworld.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                
+          <div class="content has-text-justified">
+          <p class="is-size-5"> Above shows the entropy of <strong>script-generated</strong> trajectories from MetaWorld, in which there're no regular entropy patterns.
+        </p>
+          </div>
+            </td>
+          </tr>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+</section>
+
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="titile">BibTeX</h2>
+
+  </div>
+</section>
+
+
+</body>
+
+<script>
+  var mainLoopId = setInterval(function(){
+        $('video').not('#teaser').each(function(){
+      if ($(this).is(":in-viewport")) {
+          $(this)[0].play();
+      } else {
+          $(this)[0].pause();
+      }
+      })
+    },200);
+</script>
+
+</html>
